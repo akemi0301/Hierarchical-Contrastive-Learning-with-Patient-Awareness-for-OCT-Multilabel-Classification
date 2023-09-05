@@ -1,0 +1,16 @@
+python training_main/main_linear_competition.py\
+ --dataset 'Competition' \
+ --resume '/mnt/HDD/Chau_Truong/SupCon_OCT_Clinical/save_phase_2/num_6_swin_B_384_with_Imagenet_pretrained_and_clinical_pretrained/ckpt_epoch_24_lr_0.0005/ckpt_phase_2_epoch_18_loss_0.09.pth'\
+ --competition 1 --backbone "swin_B_384_22k" --with_transformer_head\
+ --save_folder './save_phase_2/num_6_swin_B_384_with_Imagenet_pretrained_and_clinical_pretrained/ckpt_epoch_24_lr_0.0005/'\
+ --num_class 6 --epochs 30 --save_freq 2 --print_freq 50 --batch_size 16\
+ --img_size 384 --hidden_dim 2048 \
+ --keep_input_proj --dim_feedforward 8192\
+ --grad_visualize \
+ --amp\
+ --train_csv_path '/mnt/HDD/Chau_Truong/SupCon_OCT_Clinical/final_competition_csv/Training_Biomarker_Data.csv'\
+ --val_csv_path '/mnt/HDD/Chau_Truong/SupCon_OCT_Clinical/final_competition_csv/Train_9_Val_1_csv/Biomarker_Data_for_val.csv'\
+ --test_csv_path '/mnt/HDD/Chau_Truong/SupCon_OCT_Clinical/final_competition_csv/test_set_submission_template.csv'\
+ --train_image_path '/mnt/HDD/Chau_Truong/data/Datasets'\
+ --val_image_path '/mnt/HDD/Chau_Truong/data/Datasets'\
+ --test_image_path '/mnt/HDD/Chau_Truong/IEEE_2023_Ophthalmic_Biomarker_Det/TEST'
